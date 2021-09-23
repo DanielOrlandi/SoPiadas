@@ -1,0 +1,33 @@
+﻿@model SoPiadas.Models.Piada
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Resposta</h1>
+
+<div>
+    <h4>Piada</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pergunta)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pergunta)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Resposta)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Resposta)
+        </dd>
+    </dl>
+</div>
+<div>
+    @if (Model != null)
+    {
+        <a asp-action="Edit" asp-route-id="@Model.Id">Editar</a>
+    }
+    <a asp-action="Index">Voltar a lista</a>
+</div>
